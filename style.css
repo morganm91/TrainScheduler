@@ -1,0 +1,34 @@
+*{
+
+}
+
+.jumbotron{
+	background-image: url("train.jpg");
+	text-align: center;
+}
+
+.table{
+	width:100%;
+}
+
+.train-name-input{
+	width: 100%;
+
+
+}
+
+.destination-input{
+	width: 100%;
+
+}
+
+.train-time-input{
+	width: 100%;
+
+}
+
+.frequency-input{
+	width: 100%;
+
+}
+
