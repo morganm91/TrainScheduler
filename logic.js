@@ -39,7 +39,7 @@ transportationInfo.on("child_added", function(childSnapshot){
 	var Destination = childSnapshot.val().destination;
 	var Time = childSnapshot.val().time;
 	var Frequency = childSnapshot.val().frequency;	
-});
+
 
 //Convert Time
 //1st time converted  (pushed back 1 yeat to make sure it comes bck before current time)
@@ -66,4 +66,7 @@ var tMinutesUntilTrain = Frequency - tRemiander;
 var nextTrain= moment().add(tMinutesUntilTrain, "minutes");
 	console.log("ARRIVAL TIME" + moment(nextTrain).format("hh:mm"))
 
+//Now that we have the data added we need to append it to the table on the page
+$("#transportationTable > tbody").append("<tr><td>" + Name + "</td><td>"+ Destination + "</td><td>" + Frequency + "</td><td>" + Time + "</td><td>" + tMinutesUntilTrain + "</td></tr>");
 
+});
